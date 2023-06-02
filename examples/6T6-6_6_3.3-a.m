@@ -1,0 +1,21 @@
+// https://beta.lmfdb.org/Belyi/6T6/6/6/3.3/a/
+QQ := Rationals();
+R<x> := PolynomialRing(QQ);
+f := x^6 + 4*x^4 + 6*x^2 + 3;
+X2 := HyperellipticCurve(f);
+X2;
+f2 := x^3 + 4*x^2 + 6*x + 3;
+E := EllipticCurve(f2);
+E2 := EllipticCurve(x^3+1);
+jInvariant(E);
+jInvariant(E2);
+IsIsogenous(E,E2);
+f3 := 3*x^3 + 6*x^2 + 4*x + 1;
+E3 := EllipticCurve(f3/3);
+E3;
+jInvariant(E);
+jInvariant(E2);
+jInvariant(E3);
+Factorization(2048);
+IsIsomorphic(E2,E3);
+IsQuadraticTwist(E2,E3);
